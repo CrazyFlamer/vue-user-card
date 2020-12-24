@@ -1,23 +1,22 @@
 <template>
   <div class="user-card">
         <img src="../../../../user-card\img/70.jpg" class="user-photo">
-        <p class="user-nickname">romashka</p>
+        <p class="user-nickname">{{nick}}</p>
         <p class="user-name">
-            Иванов Иван<br>
-            Иванович
+            {{name}}
         </p>
         <hr>
         <p class="user-info-item">
             <img src="../../../../user-card\img/location.png">
-            Москва, Юбилейная 50
+            {{adres}}
         </p>
         <p class="user-info-item">
             <img src="../../../../user-card\img/mail.png">
-            coldrabbit48@example.com
+            {{mail}}
         </p>
         <p class="user-info-item">
             <img src="../../../../user-card\img/phone.png">
-            +7-495-266-57-34
+            {{phone}}
         </p>
     </div>
 </template>
@@ -26,7 +25,11 @@
 export default {
   name: 'HelloWorld',
   props: {
-    msg: String
+    nick: String,
+    name: String,
+    adres: String,
+    mail: String,
+    phone: String
   }
 }
 </script>
